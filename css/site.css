@@ -1,0 +1,17 @@
+/* Cursor.js 
+ * A fancy cursor for your website
+ * GitHub: https:///www.github.com/cursor.js
+ * Licence: GNU General Public License v3.0
+ * By: 0x4248
+ */
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #333;
+    color: white;
+}
