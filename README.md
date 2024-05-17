@@ -10,12 +10,12 @@ Its really simple to use Cursor.js in your website. Just include the script and 
 
 Add this link to your head tag in your HTML file.
 ```html
-<link rel="stylesheet" href="https://raw.githubusercontent.com/0x4248/cursor.js/main/css/cursor.css">
+<link rel="stylesheet" href="https://0x4248.github.io/cursor.js/css/cursor.css">
 ```
 
 Add this script tag to your body tag in your HTML file.
 ```html
-<script src="https://raw.githubusercontent.com/0x4248/cursor.js/main/js/cursor.js"></script>
+<script src="https://0x4248.github.io/cursor.js/js/cursor.js"></script>
 ```
 
 Then at the top of your body tag add the following code.
@@ -32,13 +32,13 @@ Your page should look like this.
 <html>
     <head>
         <!-- Everting else in head -->
-        <link rel="stylesheet" href="https://raw.githubusercontent.com/0x4248/cursor.js/main/css/cursor.css">
+        <link rel="stylesheet" href="https://0x4248.github.io/cursor.js/css/cursor.css">
     </head>
     <body>
         <div class="cursor"></div>  
         <div class="cursor-inner"></div>    
         <!-- Site HTML -->
-        <script src="https://raw.githubusercontent.com/0x4248/cursor.js/main/js/cursor.js" async defer></script>
+        <script src="https://0x4248.github.io/cursor.js/js/cursor.js" async defer></script>
     </body>
 </html>
 ```
@@ -49,7 +49,7 @@ And you are done. Now you have a fancy cursor on your website.
 
 You can use the dark theme by adding the following below the css link in the head tag.
 ```html
-<link rel="stylesheet" href="https://raw.githubusercontent.com/0x4248/cursor.js/main/css/dark-mode.css">
+<link rel="stylesheet" href="https://0x4248.github.io/cursor.js/css/dark_mode.css">
 ```
 
 You can also change the color of the cursor by adding the following code below the css link in the head tag.
