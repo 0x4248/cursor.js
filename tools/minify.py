@@ -11,8 +11,8 @@ file = open("js/cursor.js", "r")
 js = file.read()
 file.close()
 
-replaceFind = ["cursor =", "cursor.", "cursorInner =", "cursorInner.", "innerCursorPos", "tooltipEnabled", "scrollTimer", "showTooltip(text)", "updateTooltip(text)", "c.innerHTML = text;"]
-replaceTo = ["c=", "c.", "cI=", "cI.", "iCP", "tE", "sT", "showTooltip(t)", "updateTooltip(t)", "c.innerHTML = t;"]
+replaceFind = ["cursor =", "cursor.", "cursorInner =", "cursorInner.", "innerCursorPos", "tooltipEnabled", "scrollTimer", "showTooltip(text)", "updateTooltip(text)", "c.innerHTML = text;", "targetPos", "scrollTimer", "logVersion"]
+replaceTo = ["c=", "c.", "cI=", "cI.", "iCP", "tE", "sT", "showTooltip(t)", "updateTooltip(t)", "c.innerHTML = t;", "tP", "sT", "lV"]
 
 def replaceFromMap(file, replaceFind, replaceTo):
     for i in range(len(replaceFind)):
@@ -27,9 +27,39 @@ def preClean(file):
     file = file.replace("\t", "")
     return file
 
+def removeSpaces(file):
+    file = file.split("=")
+    for i in range(len(file)):
+        file[i] = file[i].strip()
+    file = "=".join(file)
+
+    file = file.split(">")
+    for i in range(len(file)):
+        file[i] = file[i].strip()
+    file = ">".join(file)
+
+    file = file.split("<")
+    for i in range(len(file)):
+        file[i] = file[i].strip()
+    file = "<".join(file)
+
+    file = file.replace("if (", "if(")
+    file = file.replace("else {", "else{")
+    file = file.replace("} else", "}else")
+    file = file.replace(") {", "){")
+    file = file.replace("} {", "}{")
+    file = file.replace(", (", ",(")
+    file = file.replace(" +", "+")
+    file = file.replace("+ ", "+")
+    file = file.replace(" -", "-")
+    file = file.replace("- ", "-")
+    file = file.replace(" *", "*")
+    file = file.replace("* ", "*")
+    return file
+
 js = preClean(js)
 js = replaceFromMap(js, replaceFind, replaceTo)
-
+js = removeSpaces(js)
 file = open("js/cursor.min.js", "w")
 file.write(js)
 file.close()

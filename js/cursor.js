@@ -95,7 +95,7 @@ function showTooltip(text) {
 	const cursor = document.querySelector('.cursor');
 	cursor.classList.add('tooltip');
 	cursor.innerHTML = text;
-	tooltipEnabled = true;   
+	tooltipEnabled = true;
 }
 
 function hideTooltip() {
@@ -116,3 +116,12 @@ function updateTooltip(text) {
 	const cursor = document.querySelector('.cursor');
 	cursor.innerHTML = text;
 }
+
+function logVersion() {
+	fetch('/api/version.json')
+		.then(response => response.json())
+		.then(data => console.log(`Cursor.js loaded with version ${data.version}`))
+		.catch(error => console.error('Error fetching version:', error));
+}
+
+logVersion();
