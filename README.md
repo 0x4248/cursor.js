@@ -67,6 +67,14 @@ Now our cursor will have a red color.
 
 ![Cursor.js Red](doc/red.png)
 
+## Minified Version
+
+You can also use the minified version of the script which is smaller in size by about half a kilobyte. Just replace the script tag with the following code.
+
+```html
+<script src="https://0x4248.github.io/cursor.js/js/cursor.min.js"></script>
+```
+
 ## Tooltips
 
 You can also add tooltips to your website. Just add the following code to your HTML file.
