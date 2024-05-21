@@ -111,3 +111,8 @@ function hideTooltip() {
     cursor.style.left = `${targetPos.x}px`;
     cursor.style.top = `${targetPos.y}px`;
 }
+
+function updateTooltip(text) {
+    const cursor = document.querySelector('.cursor');
+    cursor.innerHTML = text;
+}
