@@ -1,6 +1,6 @@
 /* Cursor.js 
  * A fancy cursor for your website
- * GitHub: https:///www.github.com/cursor.js
+ * GitHub: https:///www.github.com/0x4248/cursor.js
  * Licence: GNU General Public License v3.0
  * By: 0x4248
  */
